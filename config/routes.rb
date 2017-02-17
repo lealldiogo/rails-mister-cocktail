@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   end
 
   get "/", to: redirect("/cocktails")
-  delete "/doses/:id", to: 'doses#destroy'
+  delete "doses/:id", to: 'doses#destroy'
 end

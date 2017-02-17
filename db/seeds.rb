@@ -32,10 +32,12 @@ vodka.save
 mojito = Cocktail.new(name: "Mojito")
 caipirinha = Cocktail.new(name: "Caipirinha")
 sotb = Cocktail.new(name: "Sex on the Beach")
+quartinho = Cocktail.new(name: "Quartinho")
 
 mojito.save
 caipirinha.save
 sotb.save
+quartinho.save
 
 Dose.create({
   description: "Caipirinha is made with 3/4 of a lemon",
@@ -87,3 +89,13 @@ Dose.create({
   ingredient_id: vodka.id,
   cocktail_id: sotb.id
   })
+Dose.create({
+description: "Bota um copo americano de cachaça e vira pai",
+ingredient_id: cachaca.id,
+cocktail_id: quartinho.id
+  })
+Dose.create({
+description: "Depois, um limãozin pra aliviar",
+ingredient_id: lemon.id,
+cocktail_id: quartinho.id
+})
