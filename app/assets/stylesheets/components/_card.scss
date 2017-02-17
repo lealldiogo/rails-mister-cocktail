@@ -4,6 +4,7 @@
   background-size: cover !important;
   color: white;
   position: relative;
+  margin: 20px auto
 }
 .card-user {
   position: absolute;
@@ -40,4 +41,8 @@
 }
 .card-link:hover{
   opacity: 0.1;
+}
+
+.margins {
+
 }

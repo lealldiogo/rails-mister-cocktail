@@ -13,6 +13,25 @@
   </head>
 
   <body>
+    <div class="navbar-wagon">
+    <!-- Logo -->
+      <%= link_to cocktails_path do %>
+        <%= cl_image_tag("fb39e66a2cf0d338d6859b84187b5b34_brbcbq", width: 50, height: 50, crop: :fill, radius: :max) %>
+      <% end %>
+
+    <!-- Right Navigation -->
+      <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+        <!-- Search form -->
+        <form action="" class="navbar-wagon-search">
+          <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+          <button type="submit" class="navbar-wagon-search-btn">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

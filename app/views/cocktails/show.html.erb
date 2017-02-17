@@ -1,16 +1,27 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
-
 <h2><%= @cocktail.name %></h2>
 
-<ul>
-  <% @cocktail.doses.each do |d| %>
-    <li>
-      <p><%= d.description %></p>
-      <%= link_to "Delete", dose_path(d), method: :delete %>
-    </li>
-  <% end %>
-</ul>
+<div class="media">
+  <div class="media-body">
+    <div class="media-section">
+      <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.photo, crop: :fill %>');">
+      </div>
+    </div>
+    <div class="media-aside">
+      <% @cocktail.doses.each do |d| %>
+        <div class="product">
+          <p class="product-body"><%= d.description %></p>
+          <%= link_to "Delete", dose_path(d), method: :delete, class: "btn btn-danger" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail)%>
-<%= link_to "Back", cocktails_path %>
+<ul class="list-inline" >
+  <li>
+    <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success" %>
+  </li>
+  <li>
+    <%= link_to "Back", cocktails_path, class: "btn btn-warning" %>
+  </li>
+</ul>

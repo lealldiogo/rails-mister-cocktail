@@ -34,9 +34,17 @@ caipirinha = Cocktail.new(name: "Caipirinha")
 sotb = Cocktail.new(name: "Sex on the Beach")
 quartinho = Cocktail.new(name: "Quartinho")
 
+url_m = "https://uk.thebar.com/assets/en-gb/Images/AY/34660_dia_1425_950_don_julio_mojito_37_$$069A0000001gyNVIAY.jpg?maxheight=950&maxwidth=1425&quality=80"
+mojito.remote_photo_url = url_m
 mojito.save
+url_c = "https://www.petiscobrazuca.com/wp-content/uploads/2016/06/Capirinha-new-york.png"
+caipirinha.remote_photo_url = url_c
 caipirinha.save
+url_s = "https://www.comofaz.com.br/img/item/449.jpg"
+sotb.remote_photo_url = url_s
 sotb.save
+url_q = "http://www.cachacaguaraciaba.com.br/wp-content/uploads/2012/03/pinga.jpg"
+quartinho.remote_photo_url = url_q
 quartinho.save
 
 Dose.create({
