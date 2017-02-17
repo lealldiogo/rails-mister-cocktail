@@ -90,6 +90,11 @@ Dose.create({
   cocktail_id: sotb.id
   })
 Dose.create({
+  description: "Use two ice cubes to prepare a Sex on the Beach",
+  ingredient_id: ice.id,
+  cocktail_id: sotb.id
+  })
+Dose.create({
 description: "Bota um copo americano de cachaça e vira pai",
 ingredient_id: cachaca.id,
 cocktail_id: quartinho.id

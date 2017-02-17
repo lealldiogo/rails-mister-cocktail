@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :doses, only:[:new, :create]
   end
 
+  resources :doses, only:[:destroy]
   get "/", to: redirect("/cocktails")
-  delete "doses/:id", to: 'doses#destroy'
+
 end
